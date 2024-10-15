@@ -1,0 +1,99 @@
+ a {
+	 scroll-margin: 20vh;
+ }
+
+@media screen and (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
+/* Demo styles */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 120%;
+	font-family: serif;
+	padding: 6vw;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	font-family: sans-serif;
+}
+
+ul {
+	margin-top: 2vw;
+	list-style: none;
+	display: grid;
+	grid-auto-flow: dense;
+	grid-template-columns: repeat(auto-fill, minmax(189.92125984px, 1fr));
+	grid-gap: 2vw;
+}
+
+ul li a {
+	display: grid;
+	place-items: center;
+	aspect-ratio: 1/1;
+	/* background: blue; */
+	color: white;
+	text-decoration: none;
+	border-radius: 3px;
+}
+
+ul li a:focus {
+	background: ghostwhite;
+	outline-color: blue;
+	color: blue;
+}
+
+small {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	color: #595959;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Semi-transparent background for the modal */
+}
+
+.modal-content {
+    width: 100%; /* Adjust width as needed */
+    height: 80vh; /* Use viewport height to limit the modal content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* No background color */
+}
+
+.close {
+    color: white; /* Changed from #aaa to white */
+    float: right;
+	padding: 0 2rem;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: gainsboro;
+    text-decoration: none;
+    cursor: pointer;
+}
